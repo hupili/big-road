@@ -4,16 +4,37 @@
     <title>Big Road: Simplist's solution to a mobile-only web story</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0">
     <style>
+        /* Inspired by: http://embedresponsively.com/ */
+        
+        responsive-block {
+            display: block;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        
+        responsive-block iframe,
+        responsive-block object,
+        responsive-block embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
         img {
-            max-width: 100%
+            max-width: 100%;
         }
     </style>
 </head>
 
 <body>
-    <coverimage>
+    <cover-image>
         <img src="images/Rainbow-Desert-Road-Beautiful-Big-Bend-Wallpaper-3414934.jpg" alt="cover photo">
-    </coverimage>
+    </cover-image>
 
     <h1>
         Big Road
@@ -82,6 +103,36 @@
     <p>Note, an image aspect ratio of 16:9 is recommended as a sensible default.</p>
 
     <h3>Responsive video embedding</h3>
+
+    <p>Embedding videos in a responsive manner is always a pain. The conventional technique is to embed by <code>iframe</code>. You need to specify the width and height of the iframe, making it non-responsive to different screens.</p>
+
+    <p>Use Youtube as an example. You can copy the following code of
+        <a href="https://www.youtube.com/watch?v=qp0HIF3SfI4">this video</a> from its "Share --> Embed" button:
+    </p>
+
+    <p><code>
+        &#x3C;iframe width=&#x22;560&#x22; height=&#x22;315&#x22; src=&#x22;https://www.youtube.com/embed/qp0HIF3SfI4&#x22; frameborder=&#x22;0&#x22; allow=&#x22;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#x22; allowfullscreen&#x3E;&#x3C;/iframe&#x3E;
+    </code></p>
+
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/qp0HIF3SfI4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+    <p>The default result is as follows:</p>
+
+    <picture>
+        <img src="images/responsive-embedding-video.png" alt="">
+        <caption>
+            Default iframe embedding is not responsive to the screen width. It is either too small or too big.
+        </caption>
+    </picture>
+
+    <p>
+        Following is one responsive video. You can check the source code of this page to see how it works. You don't have to completely understand the internal works. Simply subsituting the URL suffices.
+    </p>
+
+    <responsive-block>
+        <iframe src='https://www.youtube.com/embed/qp0HIF3SfI4' frameborder='0' allowfullscreen>
+        </iframe>
+    </responsive-block>
 
 
 
