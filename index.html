@@ -15,6 +15,24 @@
             max-width: 100%;
         }
         
+        ratio-1-to-1 responsive-block {
+            display: block;
+            position: relative;
+            padding-bottom: 100%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        
+        ratio-4-to-3 responsive-block {
+            display: block;
+            position: relative;
+            padding-bottom: 75%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        
         responsive-block iframe,
         responsive-block object,
         responsive-block embed {
@@ -185,9 +203,37 @@
         </iframe>
     </responsive-block>
 
+    <p>
+        Note that the default aspect ratio is 16:9. Sometimes, 1:1 may look better on a vertical screen. Or, you can try 4:3, whose code is available in HTML comment block. Other aspect ratios are not suggested since this is a starter's template.
+    </p>
+
+    <ratio-1-to-1>
+        <responsive-block>
+            <iframe src='//hupili.net/20170800-sichuan-earthquake-in-100years/' frameborder='0' allowfullscreen>
+        </iframe>
+        </responsive-block>
+    </ratio-1-to-1>
+
+    <!-- 
+    <ratio-4-to-3>
+        <responsive-block>
+            <iframe src='//hupili.net/20170800-sichuan-earthquake-in-100years/' frameborder='0' allowfullscreen>
+            </iframe>
+        </responsive-block>
+    </ratio-4-to-3> 
+    -->
+
+    <h3>This page on desktop?</h3>
+
+    <p>It does not use up the entire space on a desktop computer. However it is still readable. Now that 80% traffic is on mobile web, this should suffice for most web stories. Also note that, you just learned HTML 10 minutes ago and this is what you can
+        make.
+    </p>
+
     <h3>Epilogue</h3>
 
     <p>Have fun.</p>
+
+    <p>Find the GitHub repo <a href="https://github.com/hupili/b">here</a></p>
 
 </body>
 
