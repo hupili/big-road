@@ -47,10 +47,60 @@
             max-width: 360px;
             margin-left: auto;
             margin-right: auto;
+            color: #333;
         }
         
         img {
             max-width: 100%;
+        }
+        
+        p {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        figure {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        figure figcaption {
+            display: block;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            font-size: 0.85em;
+        }
+        
+        h2 {
+            border-bottom: 1px solid #ccc;
+            margin-top: 2em
+        }
+        
+        cover-image {
+            display: block;
+            position: relative;
+        }
+        
+        cover-image h1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            color: #eee;
+            text-align: center;
+        }
+        
+        cover-image author-block {
+            position: absolute;
+            bottom: 1em;
+            left: 0;
+            right: 0;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            opacity: 0.6;
+            background-color: white;
         }
     </style>
 </head>
@@ -58,11 +108,17 @@
 <body>
     <cover-image>
         <img src="images/Rainbow-Desert-Road-Beautiful-Big-Bend-Wallpaper-3414934.jpg" alt="cover photo">
+        <h1>
+            Big Road
+        </h1>
+        <author-block>
+            <em>By</em>
+            <br>
+            <strong>
+                Pili Hu, VSCode and GitHub
+            </strong>
+        </author-block>
     </cover-image>
-
-    <h1>
-        Big Road
-    </h1>
 
     <p>This is a simplist solution to a mobile-only web story. Users with no coding background should be able to use this template after a 10 minute crash course on HTML. One does not need to learn CSS, in order to make it work in a reasonable way.</p>
 
@@ -112,20 +168,20 @@
 
     <h3>Image with caption</h3>
 
-    <picture>
+    <figure>
         <img src="images/screenshot-demo.png" alt="">
-        <caption>
+        <figcaption>
             <em> How "Big Road" looks like on mobile phone.</em>
             <br> Source: screenshot
-        </caption>
-    </picture>
+        </figcaption>
+    </figure>
 
-    <picture>
+    <figure>
         <img src="images/screenshot-demo.png" alt="">
-        <caption>
+        <figcaption>
             Sometimes, the caption can be very long which is a standalone story by itself. So you don't have to put the entire block into emphasis mode. Just <em>emaphsize the part you find most important</em>.
-        </caption>
-    </picture>
+        </figcaption>
+    </figure>
 
     <p>Note, an image aspect ratio of 16:9 is recommended as a sensible default.</p>
 
@@ -145,12 +201,12 @@
 
     <p>The default result is as follows:</p>
 
-    <picture>
+    <figure>
         <img src="images/responsive-embedding-video.png" alt="">
-        <caption>
+        <figcaption>
             Default iframe embedding is not responsive to the screen width. It is either too small or too big.
-        </caption>
-    </picture>
+        </figcaption>
+    </figure>
 
     <p>
         Following is one responsive video. You can check the source code of this page to see how it works. You don't have to completely understand the internal works. Simply subsituting the URL suffices.
