@@ -66,7 +66,10 @@
     <ol>
         <li>Fork this repository</li>
         <li>Modify <code>index.html</code> to include your content</li>
-        <li>Your web story is available on `username.github.io/big-road`</li>
+        <li>
+            Your web story is available on <code>username.github.io/big-road/</code>. For example this current page is available at <a href="hupili.github.io/big-road/">hupili.github.io/big-road/</a>. Checkout
+            <a href="https://github.com/hupili/python-for-data-and-media-communication-gitbook/blob/master/notes-week-00.md#github-pages">this page</a> for more information about hosting on GitHub Pages.
+        </li>
     </ol>
 
     <h2>Demo of supported elements for your article</h2>
@@ -134,7 +137,51 @@
         </iframe>
     </responsive-block>
 
+    <h3>Responsive interactive chart</h3>
 
+    <p>With the wide spread tools today, you don't have to learn frontend technology in order to make interactive charts. For example, there are off-the-shelf online tools like
+        <a href="https://infogram.com/">infogram.com</a>,
+        <a href="https://www.datawrapper.de/">datawrapper</a>, and
+        <a href="https://flourish.studio/">flourish</a>.
+    </p>
+
+    <p>
+        If you are Python developer, libraries like <code>plotly</code>, <code>pyecharts</code>, <code>bokeh</code>, and <code>folium</code> can help you generate interactive charts and maps within Python environment. Next question is how to embed those
+        interactive charts into your final work.
+    </p>
+
+    <p>
+        The first thing is to use your chosen library/ online tool to export a standalone webpage that includes your chart. The webpage may come along with other auxiliary files like Javascript and CSS. You need to put those files all in one folder. Then use
+        your browser to visit the webpage and make sure the chart looks normal as a standalone project. After that, ou can apply the same technique used from above responsive Youtube video to embed it into your web story Just use the following code block
+        and replace the "src" attribute with the right path to your stand alone interactive chart.
+    </p>
+
+    <p>
+        <code>&#x3C;responsive-block&#x3E;&#x3C;iframe src=&#x27;//server-name/path/to/the/file.html&#x27; frameborder=&#x27;0&#x27; allowfullscreen&#x3E;&#x3C;/iframe&#x3E;&#x3C;/responsive-block&#x3E;</code>
+    </p>
+
+    <p> Here is an example of a map made from Python's <code>folium</code> library. It is the original hi-fi version of the raster image used in <a href="https://mp.weixin.qq.com/s/aFfa7WlyT0vwXBlDYvacCg">this blog post</a>. Although the following one is
+        not interactive or animated, you can easily make it so from the <code>folium</code> library. </p>
+
+    <responsive-block>
+        <iframe src='charts/openrice-sichuan-food/map.html' frameborder='0' allowfullscreen>
+        </iframe>
+    </responsive-block>
+
+    <p>
+        Following is an animated and interactive map of Sichuan's earthquake in past 100 years. It is made by D3. The project includes many auxiliary files to make the chart work. We'd like to show you that the responsive block works with not only charts on your
+        local disk, but also charts (more precisely HTML pages) from the Internet. Note, in the "src" attribute, <strong>please start your URL with "//"</strong>, not "http", or "https". This notation lets the browser determine which protocol
+        to use and improves compatibility.
+    </p>
+
+    <responsive-block>
+        <iframe src='//hupili.net/20170800-sichuan-earthquake-in-100years/' frameborder='0' allowfullscreen>
+        </iframe>
+    </responsive-block>
+
+    <h3>Epilogue</h3>
+
+    <p>Have fun.</p>
 
 </body>
 
