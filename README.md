@@ -8,6 +8,12 @@ The simplist's solution to a mobile-only web story.
 - Modify `index.html` to include your content
 - Your web story is available on `username.github.io/big-road`
 
+## Pre-requisite
+
+Only one: HTML.
+
+You don't need to actually learn it. Just fork the repository, edit the `index.html` file and observe what is changed on the page. Our experience shows that people with no background can make a web story in this way, within 3 hours, someone in 30 minutes.
+
 ## Next steps
 
 - You can modify the repo name in the settings
