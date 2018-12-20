@@ -22,3 +22,10 @@ You don't need to actually learn it. Just fork the repository, edit the `index.h
 ## What does "Big Road" mean?
 
 In Chinese, people say **大道至简**. HTML was born a declarative and easy-to-learn language. Its output, a "web page", was originally highly adaptive -- basically the user browser can determine how to present the information. Authors can focus on their content, instead of the format. However, the 20 years or so development of web change the situation completely, making web technology a pain for new learners. Even experienced developers find it hard to follow the latest trend. Fortunately, with the widespread of mobile device, we are back to the early years of web -- simple, and one solution for all.
+
+## Sample projects
+
+- [Reporting Style of SCMP](https://warrior960812.github.io/Has-Alibaba-changed-the-South-China-Morning-Post-/)
+- [Analysis of People's daily](https://lullabymia.github.io/big-road/)
+- [Insights from AppStore](https://catmint1215.github.io/)
+- [Communication Job Market](https://zhangningnina.github.io/big-road/)
