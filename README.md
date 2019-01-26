@@ -5,8 +5,9 @@ The simplist's solution to a mobile-only web story.
 ## Getting started
 
 - Fork this repository
+- Change the repo name to `username.github.io` in "Settings"
 - Modify `index.html` to include your content
-- Your web story is available on `username.github.io/big-road`
+- Your web story is available on `username.github.io`
 
 ## Pre-requisite
 
