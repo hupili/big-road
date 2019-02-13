@@ -182,29 +182,11 @@
     </p>
 
     <responsive-block>
-        <iframe src='https://www.youtube.com/embed/qp0HIF3SfI4' frameborder='0' allowfullscreen>
+        <iframe src='https://www.youtube.com/watch?v=-19I0kJ-FRA' frameborder='0' allowfullscreen>
         </iframe>
     </responsive-block>
 
-    <h3>Responsive interactive chart</h3>
-
-    <p>With the wide spread tools today, you don't have to learn frontend technology in order to make interactive charts. For example, there are off-the-shelf online tools like
-        <a href="https://infogram.com/">infogram.com</a>,
-        <a href="https://www.datawrapper.de/">datawrapper</a>, and
-        <a href="https://flourish.studio/">flourish</a>.
-    </p>
-
-    <p>
-        If you are Python developer, libraries like <code>plotly</code>, <code>pyecharts</code>, <code>bokeh</code>, and <code>folium</code> can help you generate interactive charts and maps within Python environment. Next question is how to embed those
-        interactive charts into your final work.
-    </p>
-
-    <p>
-        The first thing is to use your chosen library/ online tool to export a standalone webpage that includes your chart. The webpage may come along with other auxiliary files like Javascript and CSS. You need to put those files all in one folder. Then use
-        your browser to visit the webpage and make sure the chart looks normal as a standalone project. After that, ou can apply the same technique used from above responsive Youtube video to embed it into your web story Just use the following code block
-        and replace the "src" attribute with the right path to your stand alone interactive chart.
-    </p>
-
+    
     <p>
         <code>&#x3C;responsive-block&#x3E;&#x3C;iframe src=&#x27;//server-name/path/to/the/file.html&#x27; frameborder=&#x27;0&#x27; allowfullscreen&#x3E;&#x3C;/iframe&#x3E;&#x3C;/responsive-block&#x3E;</code>
     </p>
