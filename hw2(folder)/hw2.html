@@ -2,6 +2,8 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
 
     <style>
         body {
@@ -41,47 +43,145 @@
         
         #space {
             margin: 8em;
+            height: 3px;
         }
     </style>
 
 </head>
 
 <body>
-    <h1>
+    <h1 class="animated flash">
         ZHAO Minzhu's protfolio
     </h1>
     <div id="space"></div>
-
-    <h2>Introduction</h2>
     <div id="space"></div>
-    <p>Here is my introduction</p>
-    <p>Hello, my name is ZHAO Minzhu, a freashman from HKBU Communication Department.</p>
-    <p>There are something about me.</p>
-    <h2>About my pojects in JOUR2106</h2>
-    <ul>
-        <li>
-            <a href="../hw1/index.html">homework1</a>
+    <div id="space"></div>
 
-        </li>
-    </ul>
-    <ol>
-        <li>
-            <a href="https://github.com/MindyZHAOMinzhu/MindyZHAOMinzhu.github.io">my github website</a>
-        </li>
-    </ol>
-    <p class="common-p other-p">another paragraph</p>
-    <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
-    <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
-    <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
-    <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
-    <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
-    <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
-    <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
-    <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
-    <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
-    <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
-    <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
-    <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
+    <h2>Bio</h2>
+
+    <style>
+        .headshot {
+            background: lightblue;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .profile1,
+        .profile2 {
+            background-color: blue;
+            margin: 2px;
+        }
+        
+        @media(min-width:600px) {
+            #begin {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: /* prettier-ignore*/
+                "hs p1"
+                /* prettier-ignore*/
+                "hs p2";
+            }
+            @media(min-width:800px) {
+                #begin {
+                    display: grid;
+                    grid-template-columns: 2fr 1fr;
+                    grid-template-rows: auto;
+                    grid-template-areas: /* prettier-ignore*/
+                    "hs p1 p2";
+                }
+                .headshot {
+                    grid-area: hs;
+                }
+                .profile1 {
+                    grid-area: p1;
+                }
+                .profile2 {
+                    grid-area: p2;
+                }
+            }
+        }
+    </style>
+
+    <div>
+        <div class="headshot">headshot</div>
+        <div class="profile1">profile1</div>
+        <div class="profile1">profile2</div>
+
+
+        <h2>Album</h2>
+        <style>
+            .photo {
+                min-width: 100px;
+                min-height: 100px;
+                background: antiquewhite;
+                border: lightblue 1px solid;
+                margin: 5px;
+            }
+            
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            
+            @media (max-width:800px) {
+                .container {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+            
+            @media (max-width:500px) {
+                .container {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+
+        <div class="container">
+            <div class="photo">Photo1</div>
+            <div class="photo">Photo2</div>
+            <div class="photo">Photo3</div>
+            <div class="photo">Photo4</div>
+            <div class="photo">Photo5</div>
+
+        </div>
+
+
+        <h2>Introduction</h2>
+        <div id="space"></div>
+        <p>Here is my introduction</p>
+        <p>Hello, my name is ZHAO Minzhu, a freashman from HKBU Communication Department.</p>
+        <p>There are something about me.</p>
+        <h2>About my pojects in JOUR2106</h2>
+        <ul>
+            <li>
+                <a href="../hw1/index.html">homework1</a>
+
+            </li>
+        </ul>
+        <ol>
+            <li>
+                <a href="https://github.com/MindyZHAOMinzhu/MindyZHAOMinzhu.github.io">my github website</a>
+            </li>
+        </ol>
+        <p class="common-p other-p">another paragraph</p>
+        <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
+        <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
+        <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
+        <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
+        <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
+        <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
+        <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
+        <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
+        <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
+        <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
+        <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
+        <p>hhhhhhhhuhuhigukyftguhjgfhjkgfghjkgfjkgfjgfjgfjkg</p>
 </body>
 
 
