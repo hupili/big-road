@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" <title>ZHAO Mindy'CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <style>
+        . common-p {
+            font-size: 50em
+        }
+        
+        .other-p {
+            background-color: rgb(216, 166, 185);
+            text-align: center;
+        }
+        
+        h1 {
+            text-align: center;
+            background-color: rgb(185, 107, 155);
+            color: white;
+            font-size: 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            padding: 0.5em;
+        }
+        
+        #space {
+            margin: 4em;
+            height: 1px;
+        }
+        
+        #space2 {
+            margin: 2em;
+            height: 1px;
+        }
+        
+        .headshot {
+            background-color: lightblue;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .profile1,
+        .profile2 {
+            background-color: plum>;
+            margin: 2px;
+        }
+        
+        img {}
+        
+        .photo {
+            background-color: yellow;
+            width: 300px;
+            height: 600px;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        
+        @media(min-width:600px) {
+            #begin {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: /* prettier-ignore*/
+                "hs p1"
+                /* prettier-ignore*/
+                "hs p2";
+            }
+        }
+        
+        @media(min-width:800px) {
+            #begin {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: /* prettier-ignore*/
+                "hs p1 p2";
+            }
+            .headshot {
+                grid-area: hs;
+            }
+            .profile1 {
+                grid-area: p1;
+            }
+            .profile2 {
+                grid-area: p2;
+            }
+        }
+    </style>
+
+
+    <body id="top">
+
+        <body id="header">
+            <div class="inner">
+                <h1 class="animated flash ">
+                    ZHAO Minzhu(Mindy)'s protfolio
+                </h1>
+                <div id="space"></div>
+
+
+
+                <p class="common-p other-p">I am ZHAO Minzhu (MIndy)</p>
+                <img src="images/5.jpg" align=right width="240" height="170">
+                <img src="images/6.JPG" align=right width="240" height="170">
+                <h4>From mainlan China--- <strong>Chongqing</strong></h4>
+                <h4>Now I am studying in <strong>Hong Kong Baptist University</strong> </h4>
+                <p>
+                    <font color="gray" size="4">
+                        Motto: </font>
+                    </One><strong>My potential is more than can be expressed within the bounds of my race or ethic identity.</strong></p>
+            </div>
+            </header>
+
+            <div id="space"></div>
+
+
+            <div id="main">
+
+                <hr/>
+
+                <section id="one">
+                    <header class="major">
+
+                        <h2>Learning Experience</h2>
+                    </header>
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvjrEc_KSbL8LBdX9TPavro5dub86SX2ki9CgnURYXJIxPnJEcsg" align=right width="200" height="150">
+
+                    <img src="images/8.jpg" align=right width="200" height="150">
+                    <img src="https://www.timeshighereducation.com/unijobs/getasset/?uiAssetID=60e3226d-b146-47b4-9806-7a0d0ae044ba" align=right width="200" height="150">
+
+
+
+                    <ul>
+                        <li>Chongqing Bashu Primary School<br> 2006.9 - 2012.6</li>
+                        <li>Chongqing Nankai Secondary School<br> 2012.9-2018.6</li>
+                        <li>Hong Kong Baptist University<br> from 2018.9</li>
+                    </ul>
+
+
+
+                </section>
+                <div id="space"></div>
+
+
+                <hr/>
+
+                <section id="one">
+                    <header class="major">
+                        <h2>Hobbies and Skills</h2>
+                    </header>
+
+
+                    <ul>
+                        <li>Yogo<br> I like this kind of sports which are smooth and comfortable. I can make me clam down and think about everything I want.',
+                        </li>
+                        <li>Photograthy<br> To use photos to memorize my life.</li>
+                    </ul>
+
+                </section>
+                <hr/>
+                <section id="one">
+                    <header class="major">
+                        <h2>Growing Up</h2>
+                    </header>
+                    <img src="images/9.JPG" width="300" height="280">
+                    <img src="images/1.jpeg" width="240" height="280">
+                    <img src="images/3.jpeg" width="240" height="280">
+
+                </section>
+
+
+
+
+            </div>
+
+            <footer>
+                <div>
+
+                    <a href="https://github.com/MindyZHAOMinzhu">
+                        <img src="data:image/png;base64,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"
+                            width="100" height="60" alt="">
+                    </a>
+                    <h5>Github</h5>
+
+                    <div id="space2"></div>
+
+                    <a href="https://www.facebook.com/zhao.minzhu">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEVCZ7L///+5w95GarM2YK80Xq+pttc+ZbFfe7s6YrCHmsmZqdA8Y7BSdLns8Pdffr2QpNHV3Oxrh8Lg5vIvW633+fzEz+ZKb7etutmer9XG0eiCmsza4e/Q1+qIn87x8/h7k8hmhMFxjMRYeLto3e1YAAAEZElEQVR4nO3dW3eqOhSG4YDBmDYQEFHroZ7+/3/cnrpH19rdGqHJnMn43pt1VRfPmFBBIhXZraqpp6VIpXJaN9VdJm7/5FZqQ71dv5jR0ubfhK2VKfFuGWnbL2FTaurN8ZIum5uwLdMb4C1TtlehTXOCl7S9CHNJvR0ek3kmKpvqPnrJ2Eo0KY/wPMRG1OkehZd0LaYp76Tn3XQq0jlV+7nUfQghhBBCCCGEEEIIuaSUMUZrLaW+ZK4pJRT1hv1OWhaiPBz367f63Ofn23q/Px4PdlIulJwVxVmsYqUqo4vZaL1sNm2167r73eqs67pdVVVt226abb58X0/LIspbEkqK6fvqX9fj3uMjmtli3OzceBdhbHdd9OjoOr0oZ6iKffMKL7YZKnPYvjS/2GZoRuOXfVHNUJ42r/simqEqPnoMMCLhGdjLF81eqkbznsBIZqhMb2AsM8x7A+OYYTHuD4xihroeAIxhhubgfpod5QyVfPVMNLYZ6iEHYQxCYwftoxHspbPVMCD7GRo7EMh9hkoN+zXDf4Zm3++CIp4ZmgGna1HMUC0Gj5D5DOWg87UYZih7fW4RkdDY6rngqZDzXir7fnLxh5DxDJXof2X/Tch4hqpsf0PIeIZm8gKk26zy5XI5/rsl52+L6LUrbzffnxYjpeUPMQaKwvGEphqPChPlje2Z27thc9IR4q5Jp2vfueK8Hz5u4SKsFvECzcHltPvI+M3gWU7Xhqtol5MIxwuLz4hHKPT7c2BVRjxCp/PubUG9lUNyuR8zjloolw6HIeMLh+e5nLQd4n0zFG7CSfLCqH+VOgkX1Bs5KBfhiHojBwUhhPyDEEL+QQgh/yCEkH8QQsg/CCHkXxJC9dON969mDkJTPHqFc8SfGKvDf9dOfMvhJvejH7/2QUvUb88NA6tmqQtXtLduAgiXtHdQAwiJV7UFEL6lLuyOtDen/Asr4huM/oXtifb2m39hM0pduCVebuNfmBOv1fAv/Eh+hnvilQz+hdR/t8K/kNYXQNjRXjsFELbJC+fUC/u8C8mXLnoX1tQriL0Lqd8OvQs78u88+RZWlnrpom/hhnxxpm/hlvjq0L9wTn0YehcSf1gaQEj/FWDPwm6d+l7a0X9XwbNwR7/O3beQ+rzbu3BDfXV4Fn56FZJfHV4eP2Mn/9/J4ZkRj35+wuHvGqpHuaxUEObBC1DrnpbEapOHQQgh/yCEkH8QQsg/CCHkH4QQ8g9CCPkHIYT8gxBC/kEIIf8ghJB/EELIPwgh5B+EEPIPQgj5ByGE/IMQQv5BCCH/IISQfxBCyD8IIeQfhBDyD0II+QchhPyD8BeFRM8mCCYsBdFTz0IJzVTUNA8jCiXUtWhoHigVSigbUdE8qzaQ0NhKZDnJEAMJZZ6JrLMUR2IYobbZWZi1JcF+GkRoyvYqzJoy/BRDCHXZZDdh1loZeoz+hUbaNvsSZl1upQ6K9Cw0Wtr7/yDur1Y19TTkCZxfYTmtm+r+Kv8AnSxQ4AfoGcQAAAAASUVORK5CYII="
+                            rwidth="50" height="50" alt="">
+                    </a>
+                    <h5>facebook</h5>
+
+
+
+                </div>
+
+
+
+
+
+            </footer>
+
+            <div class="container">
+                <div class="photo">Photo1</div>
+                <div class="photo">Photo2</div>
+                <div class="photo">Photo3</div>
+                <div class="photo">Photo4</div>
+                <div class="photo">Photo5</div>
+
+            </div>
+
+
+        </body>
+
+</html>
