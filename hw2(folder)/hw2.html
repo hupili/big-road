@@ -61,90 +61,90 @@
     <h2>Bio</h2>
 
     <style>
-        .headshot {
-            background-color: lightblue;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .profile1,
-        .profile2 {
-            background-color: blue;
-            margin: 2px;
-        }
-        
-        @media(min-width:600px) {
-            #begin {
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-                grid-template-rows: auto;
-                grid-template-areas: /* prettier-ignore*/
-                "hs p1"
-                /* prettier-ignore*/
-                "hs p2";
-            }
-        }
-        
-        @media(min-width:800px) {
-            #begin {
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-                grid-template-rows: auto;
-                grid-template-areas: /* prettier-ignore*/
-                "hs p1 p2";
-            }
             .headshot {
-                grid-area: hs;
+                background-color: lightblue;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                margin-left: auto;
+                margin-right: auto;
             }
-            .profile1 {
-                grid-area: p1;
-            }
+            
+            .profile1,
             .profile2 {
-                grid-area: p2;
-            }
-        }
-    </style>
-
-    <div>
-        <div class="headshot">headshot</div>
-        <div class="profile1">profile1</div>
-        <div class="profile2">profile2</div>
-
-
-        <h2>Album</h2>
-        <style>
-            img {
-                width: 100%;
+                background-color: blue;
+                margin: 2px;
             }
             
-            .photo {
-                <img src="images/8.jpg" align=right width="200" height="150"><img src="https://www.timeshighereducation.com/unijobs/getasset/?uiAssetID=60e3226d-b146-47b4-9806-7a0d0ae044ba" alt="Primary aschool" style="widhth:500px";
-                height: "600px">
-            }
-            
-            .container {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-            
-            @media (max-width:800px) {
-                .container {
+            @media(min-width:600px) {
+                #begin {
                     display: grid;
-                    grid-template-columns: 1fr 1fr;
+                    grid-template-columns: 2fr 1fr;
+                    grid-template-rows: auto;
+                    grid-template-areas: /* prettier-ignore*/
+                    "hs p1"
+                    /* prettier-ignore*/
+                    "hs p2";
                 }
             }
             
-            @media (max-width:500px) {
-                .container {
+            @media(min-width:800px) {
+                #begin {
                     display: grid;
-                    grid-template-columns: 1fr;
+                    grid-template-columns: 2fr 1fr;
+                    grid-template-rows: auto;
+                    grid-template-areas: /* prettier-ignore*/
+                    "hs p1 p2";
+                }
+                .headshot {
+                    grid-area: hs;
+                }
+                .profile1 {
+                    grid-area: p1;
+                }
+                .profile2 {
+                    grid-area: p2;
                 }
             }
         </style>
-
+    
+        <div>
+            <div class="headshot">headshot</div>
+            <div class="profile1">profile1</div>
+            <div class="profile2">profile2</div>
+    
+    
+            <h2>Album</h2>
+            <style>
+                img {
+                    width: 100%;
+                }
+                
+                .photo {
+                    <img src="images/8.jpg" align=right width="200" height="150"><img src="https://www.timeshighereducation.com/unijobs/getasset/?uiAssetID=60e3226d-b146-47b4-9806-7a0d0ae044ba" alt="Primary aschool" style="widhth:500px";
+                    height: "600px">
+                }
+                
+                .container {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+                
+                @media (max-width:800px) {
+                    .container {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                    }
+                }
+                
+                @media (max-width:500px) {
+                    .container {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+    
         <div class="container">
             <div class="photo">Photo1</div>
             <div class="photo">Photo2</div>
