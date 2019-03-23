@@ -240,10 +240,14 @@
             } else if (num2 > 3) {
                 result = 'Wrong data'
             } else {
-                result = a / b **
+                result = a / b
 
             }
-            document.getElementById('calculate1').addEventListener('click', calculate)
+            document.getElementById('result').addEventListener('click', result)
+            document.getElementById('calculate1').addEventListener('click', calculate1)
+            document.getElementById("num1").addEventListener('change', calculate1)
+            document.getElementById("num2").addEventListener('keyup', calculate1)
+            document.getElementById("num2").addEventListener('change', calculate1)
 
 
 
@@ -256,7 +260,7 @@
 
             a = document.getElementById("num1").value
             b = document.getElementById("num2").value
-            c = document.getElementById("num3").value
+            c = document.getElementById("age").value
 
             result2 = (1.2 * result) + (0.23 * c - 5.4) - 10.8
                 //write the add caculation
@@ -272,6 +276,7 @@
             b = +document.getElementById("num2").value
             c = document.getElementById("num3").value
             result3 = (1.2 * result) + (0.23 * c - 5.4)
+            document.getElementById("result1").value = result3
 
 
 
