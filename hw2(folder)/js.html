@@ -1,22 +1,337 @@
+<!DOCTYPE html>
+<html>
+
 <head>
-    <title>Mindy</title>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Mindy's calculator</title>
+    <style type="text/css">
+        body {
+            font-size: 16px;
+            font-family: 'Courier New', Courier, monospace
+        }
+        
+        h3 {
+            font-size: 30;
+            text-decoration: underline
+        }
+        
+        table {
+            width: 400 px;
+            border-collapse: collapse
+        }
+        
+        td {
+            border-bottom: 1px solid #888888;
+            padding: 10px
+        }
+        /* 表格中的第一對 tr */
+        
+        tr:nth-child(1) {
+            background-color: #7788aa;
+            color: #ffffff
+        }
+        /*表格中的偶數對 tr */
+        
+        tr:nth-child(even) {
+            background-color: #e8e8e8
+        }
+        
+        main {
+            /*容器*/
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background-color: #cccccc;
+        }
+        
+        .head {
+            background-color: pink;
+            font-size: 35px;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px
+        }
+        
+        .content1 {
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .box {
+            width: 280px;
+            padding: 10px;
+            margin: 10px;
+            background-color: white;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            height: 300px;
+            line-height: 30px;
+        }
+        
+        .title {
+            font-weight: 200;
+            font-size: 25px
+        }
+        
+        .title2 {
+            font-weight: bold
+        }
+        /* for mobile device*/
+        
+        @media screen and (max-width:600px) {
+            .content1 {
+                width: 100%;
+                text-align: center
+            }
+            .head {
+                font-size: 10px
+            }
+        }
+        
+        .title3 {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: left
+        }
+        
+        div.keycontent {
+            width: 1000px;
+            padding: 10px;
+            border: 1px dashed rgb(126, 160, 231);
+            margin-top: 10px;
+            margin-bottom: 10px
+        }
+        
+        .keyword {
+            color: brown
+        }
+        
+        .space {
+            position: absolute;
+            left: 100px;
+            top: 50px;
+            right: 20px;
+            margin: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: green
+        }
+        
+        .welcomepart {
+            font-weight: 200;
+            font-size: 25px;
+            text-align: center
+        }
+        
+        .demo {
+            font-size: 25px;
+            font-weight: 700;
+            color: darkslategrey;
+            text-align: center
+        }
+        
+        #btn {
+            border: 1px solid #888888;
+            background-color: #ffffff;
+            padding: 5px
+        }
+        
+        #btn:hover {
+            background-color: gray
+        }
+        
+        input:focus {
+            border: 2px solid red
+        }
+        
+        .demo a {
+            color: green
+        }
+        
+        .favorite a {
+            color: blue
+        }
+    </style>
+
 
 </head>
 
-<body>
-    <h2>Excersise</h2>
-    <p>hhhhhhhh</p>
-    <script>
-        a = 1
-        b = 2
-        a + b
-        c = a + b
+<body style="margin:0px;background-color:rgb(250, 218, 223)">
 
-        result = Math.pw(a, b)
+    <div class="head">Mindy's Caculator</div>
+    <div class="welcomepart">
+        <b>Welcome!</b>
+        <br>
+        <b>This is a simple calculator</b></div>
+    <p class="demo">You can use this caculator to caculate your BMI.
+        <div class="content1">
+            <div class="box">
+                <div class="title2"> BIM </div>
+                <span class="keyword">BMI</span> is Body Mass Index。
+                <div>The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m2, resulting from mass in kilograms and height in metres. </div>
 
-        console.log('result:')
-        console.log(a + b)
-        console.log(result)
+            </div>
+            <div class="box">
+                <div class="title2">BMR</div>
+                <div>Basal metabolic rate (BMR) is the rate of energy expenditure per unit time by endothermic animals at rest.</div>
+            </div>
+            <div class="box">
+                <div class="title2">Proper BMI</div>
+                <div>BMI is a simple calculation using a person's height and weight. The formula is BMI = kg/m2 where kg is a person's weight in kilograms and m2 is their height in metres squared. A BMI of 25.0 or more is overweight, while the healthy range
+                    is 18.5 to 24.9. </div>
+            </div>
+
+        </div>
+        <br>
+        <hr>
+
+        <div class="title3">STEP 1: </div>
+
+
+        <div>Click the button to check how to use it.</div>
+
+
+    </p>
+
+
+    <button type="button" onclick='document.getElementById("demo").innerHTML = " <p>Male</p> Please click Male <p>Female </p>Please click Female  "'>How to  use it.</button>
+    <br>
+    <hr>
+    <br>
+    <div class="title3">STEP 2: </div>
+    <br> Your height:
+    <input id="num1" type="number" value="0">
+    <span>m</span>
+    <br><br> Your weight:
+    <input id="num2" type="number" value="0">
+    <span>kg</span>
+    <br>
+    <br>
+    <button id="calculate1"> Caculation</button>
+    <br>
+    <br>BMI Result:
+    <input id="result" type="number">
+    <br>
+    <br>
+    <hr>
+    <div class="title3">STEP 3: </div>
+
+
+    <br> Your age:
+    <input id="age" type="number" value="18">
+    <span>yaers old</span>
+    <br>
+    <br>
+    <button id="calculate2"> Male </button>
+    <button id="calculate3"> Female </button>
+
+    <script type="text/javascript">
+        function calculate1() {
+
+            a = +document.getElementById("num1").value
+            b = +document.getElementById("num2").value
+            if (num1 > 300) {
+                result = 'Wrong data'
+            } else if (num2 > 3) {
+                result = 'Wrong data'
+            } else {
+                result = a / b **
+
+            }
+            document.getElementById('calculate1').addEventListener('click', calculate)
+
+
+
+        }
+
+
+
+
+        function calculate2() {
+
+            a = document.getElementById("num1").value
+            b = document.getElementById("num2").value
+            c = document.getElementById("num3").value
+
+            result2 = (1.2 * result) + (0.23 * c - 5.4) - 10.8
+                //write the add caculation
+
+
+
+
+        }
+
+        function calculate3() {
+
+            a = +document.getElementById("num1").value
+            b = +document.getElementById("num2").value
+            c = document.getElementById("num3").value
+            result3 = (1.2 * result) + (0.23 * c - 5.4)
+
+
+
+        }
+        document.getElementById("calculate1").addEventListener('click', calculate1)
+        document.getElementById("calculate2").addEventListener('click', calculate2)
+        document.getElementById("calculate3").addEventListener('click', calculate3)
+
+
+        document.getElementById("num1").addEventListener('change', calculate1)
+        document.getElementById("num2").addEventListener('keyup', calculate1)
+        document.getElementById("num2").addEventListener('change', calculate1)
     </script>
 
+
+
+    <br>
+    <br>體脂率 Result:
+    <input id="result1" type="number">
+    <hr>
+
+    <div class="title3">STEP 4: </div>
+    <div class="title">
+        <p>Reference: </p>
+    </div>
+
+    <table>
+        <tr>
+            <td>sex</td>
+            <td>體脂率 標準值</td>
+            <td>BMI 標準值</td>
+
+        </tr>
+        <tr>
+            <td>
+                Male
+            </td>
+            <td>
+                14~23%
+            </td>
+            <td>
+                20~25%
+            </td>
+
+        </tr>
+        <tr>
+            <td>Female</td>
+            <td>17~27%</td>
+            <td>18~22%</td>
+        </tr>
+
+    </table>
+
+    <ul class="favorite">
+        <li>Know more about <a href="https://en.wikipedia.org/wiki/Body_mass_index">BMI</a></li>
+        <li>Know more about some <a href="https://www.wikihow.com/Live-a-Healthy-Lifestyle">healthy life style</a></li>
+    </ul>
+
+
+
 </body>
+
+</html>
