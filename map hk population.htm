@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Highmaps Example</title>
+
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center"> HK poplulation on the map</h1>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="http://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+    <script src="Highmaps-7.0.3/world.js"></script>
+
+
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/gantt/modules/networkgraph.js"></script>
+
+    <div id="container" style="height: 500px; min-width: 310px; max-width: 800px; margin: 0 auto"></div>
+
+    <h1>vvv</h1>
+
+    <script type="text/javascript">
+        // Prepare random data
+        var data = [
+            ["Central & Western", 243266],
+            ["Wan Chai", 180123],
+            ["Eastern", 555034],
+            ["Southern", 274994],
+            ["Yau Tsim Mong", 342970],
+            ["Sham Shui Po", 405869],
+            ["Kowloon City", 418732],
+            ["Wong Tai Sin", 425235],
+            ["Kwun Tong", 648541],
+            ["Kwai Tsing", 520572],
+            ["Tsuen Wan", 318916],
+            ["Tuen Mun", 489299],
+            ["Yuen Long", 614178],
+            ["North", 315270],
+            ["Tai Po", 303926],
+            ["Sha Tin", 659794],
+            ["Sai Kung", 461864]
+        ]
+
+        ;
+
+        $.getJSON('dc_land.lowres.geo.json', function(geojson) {
+
+            // Initiate the chart
+            Highcharts.mapChart('container', {
+                chart: {
+                    map: geojson
+                },
+
+                title: {
+                    text: 'GeoJSON in Highmaps'
+                },
+
+                mapNavigation: {
+                    enabled: true,
+                    buttonOptions: {
+                        verticalAlign: 'bottom'
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'none',
+                    borderWidth: 0,
+                    shadow: false,
+                    useHTML: true,
+                    padding: 0,
+                    pointFormat: '<span class="f32"><span class="flag {point.flag}"></span></span>' +
+                        ' {point.DC_ENG}: <b>{point.value}</b>/km²',
+                    positioner: function() {
+                        return {
+                            x: 0,
+                            y: 250
+                        };
+                    }
+                },
+
+                colorAxis: {
+                    tickPixelInterval: 100
+                },
+
+                series: [{
+                    data: data,
+                    keys: ['DC_ENG', 'value'],
+                    joinBy: 'DC_ENG',
+                    name: 'Random data',
+                    states: {
+                        hover: {
+                            color: '#a4edba'
+                        }
+                    },
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.properties.postal}'
+                    }
+                }]
+            });
+        });
+    </script>
+</body>
+
+</html>

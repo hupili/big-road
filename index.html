@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <meta charset="utf-8" <title>ZHAO Mindy'CV</title>
+    <meta charset="utf-8">
+    <title>ZHAO Mindy'CV</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <style>
@@ -214,7 +215,232 @@
 
             </footer>
 
+            <script src="Highcharts-7.0.3/code/highcharts.js"></script>
+            <script src="Highcharts-7.0.3/code/modules/annotations.js"></script>
+            <script src="Highcharts-7.0.3/code/modules/exporting.js"></script>
+            <script src="Highcharts-7.0.3/code/modules/export-data.js"></script>
 
+
+            <div id="container" style="height: 400px; min-width: 380px"></div>
+
+
+
+
+            <script type="text/javascript">
+                // Data generated from http://www.bikeforums.net/professional-cycling-fans/1113087-2017-tour-de-france-gpx-tcx-files.html
+                var elevationData = [
+                    [0, 0.52],
+                    [2, 0.6],
+                    [3, 0.7],
+                    [4, 0.9],
+                    [5, 1],
+                    [6, 1.1],
+                    [7, 1.15],
+                    [8, 1.2],
+                    [9, 1.25],
+                    [10, 1.3],
+                    [11, 1.45],
+                    [12, 1.48],
+                    [13, 1.5],
+                    [14, 1.52],
+                    [15, 1.54],
+                    [16, 1.55],
+                    [17, 1.55],
+                    [18, 1.55]
+
+
+
+                ];
+
+                // Now create the chart
+                Highcharts.chart('container', {
+
+                    chart: {
+                        type: 'area',
+                        zoomType: 'x',
+                        panning: true,
+                        panKey: 'shift',
+                        scrollablePlotArea: {
+                            minWidth: 600
+                        }
+                    },
+
+                    title: {
+                        text: 'Growing up as time goes by'
+                    },
+
+                    subtitle: {
+                        text: 'An annotated chart in Highcharts'
+                    },
+
+                    annotations: [{
+                        labelOptions: {
+                            backgroundColor: 'rgba(255,255,255,0.5)',
+                            verticalAlign: 'top',
+                            y: 15
+                        },
+                        labels: [{
+                            point: {
+                                xAxis: 0,
+                                yAxis: 0,
+                                x: 1,
+                                y: 1
+                            },
+                            text: 'Arbois'
+                        }, {
+                            point: {
+                                xAxis: 0,
+                                yAxis: 0,
+                                x: 2,
+                                y: 2
+                            },
+                            text: 'Montrond'
+                        }, {
+                            point: {
+                                xAxis: 0,
+                                yAxis: 0,
+                                x: 3,
+                                y: 1
+                            },
+                            text: 'Mont-sur-Monnet'
+                        }, {
+                            point: {
+                                xAxis: 0,
+                                yAxis: 0,
+                                x: 4,
+                                y: 1.1
+                            },
+                            x: -10,
+                            text: 'Bonlieu'
+                        }, {
+                            point: {
+                                xAxis: 0,
+                                yAxis: 0,
+                                x: 9,
+                                y: 1.3
+                            },
+                            text: 'Chassal'
+                        }, {
+                            point: {
+                                xAxis: 0,
+                                yAxis: 0,
+                                x: 13,
+                                y: 1.4
+                            },
+                            text: 'Saint-Claude'
+                        }]
+                    }, {
+                        labels: [{
+                            point: {
+                                xAxis: 0,
+                                yAxis: 0,
+                                x: 101.44,
+                                y: 1026
+                            },
+                            x: -30,
+                            text: 'Col de la Joux'
+                        }, {
+                            point: {
+                                xAxis: 0,
+                                yAxis: 0,
+                                x: 138.5,
+                                y: 748
+                            },
+                            text: 'Côte de Viry'
+                        }, {
+                            point: {
+                                xAxis: 0,
+                                yAxis: 0,
+                                x: 2,
+                                y: 0.5
+                            },
+                            text: 'Montée de la Combe<br>de Laisia Les Molunes'
+                        }]
+                    }, {
+                        labelOptions: {
+                            shape: 'connector',
+                            align: 'right',
+                            justify: false,
+                            crop: true,
+                            style: {
+                                fontSize: '0.8em',
+                                textOutline: '1px white'
+                            }
+                        },
+                        labels: [{
+                            point: {
+                                xAxis: 0,
+                                yAxis: 0,
+                                x: 14,
+                                y: 1.52
+                            },
+                            text: '14 year old, 1.52m'
+                        }, {
+                            point: {
+                                xAxis: 0,
+                                yAxis: 0,
+                                x: 16,
+                                y: 1.54
+                            },
+                            text: '16 year old, 1.54m'
+                        }, {
+                            point: {
+                                xAxis: 0,
+                                yAxis: 0,
+                                x: 18,
+                                y: 1.56
+                            },
+                            text: '18 year old, 1.56m'
+
+                        }]
+                    }],
+
+                    xAxis: {
+                        labels: {
+                            format: '{value} m'
+                        },
+                        minRange: 5,
+                        title: {
+                            text: 'height'
+                        }
+                    },
+
+                    yAxis: {
+                        startOnTick: true,
+                        endOnTick: false,
+                        maxPadding: 0.35,
+                        title: {
+                            text: null
+                        },
+                        labels: {
+                            format: '{value} m'
+                        }
+                    },
+
+                    tooltip: {
+                        headerFormat: 'height: {point.x:.1f} m<br>',
+                        pointFormat: '{point.y} years old ',
+                        shared: true
+                    },
+
+                    legend: {
+                        enabled: false
+                    },
+
+                    series: [{
+                        data: elevationData,
+                        lineColor: Highcharts.getOptions().colors[1],
+                        color: Highcharts.getOptions().colors[2],
+                        fillOpacity: 0.5,
+                        name: 'Elevation',
+                        marker: {
+                            enabled: false
+                        },
+                        threshold: null
+                    }]
+
+                });
+            </script>
 
         </body>
 

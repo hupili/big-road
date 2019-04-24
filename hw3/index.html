@@ -205,17 +205,17 @@
     <br>
     <div class="title3">STEP 2: </div>
     <br> Your height:
-    <input id="num1" type="number" value="0">
+    <input id="num1" type="text" value="0">
     <span>m</span>
     <br><br> Your weight:
-    <input id="num2" type="number" value="0">
+    <input id="num2" type="text" value="0">
     <span>kg</span>
     <br>
     <br>
     <button id="calculate1"> Caculation</button>
     <br>
     <br>BMI Result:
-    <input id="result" type="number">
+    <input id="result" type="text">
     <br>
     <br>
     <hr>
@@ -223,7 +223,7 @@
 
 
     <br> Your age:
-    <input id="age" type="number" value="18">
+    <input id="age" type="text" value="18">
     <span>yaers old</span>
     <br>
     <br>
@@ -235,9 +235,9 @@
 
             a = +document.getElementById("num1").value
             b = +document.getElementById("num2").value
-            if (num1 > 300) {
+            if (a > 10) {
                 result = 'Wrong data'
-            } else if (num2 > 3) {
+            } else if (b > 3) {
                 result = 'Wrong data'
             } else {
                 result = a / (b * b)
@@ -299,7 +299,7 @@
 
     <br>
     <br>體脂率 Result:
-    <input id="result1" type="number">
+    <input id="result1" type="text">
     <hr>
 
     <div class="title3">STEP 4: </div>
@@ -338,7 +338,6 @@
         <li>Know more about <a href="https://en.wikipedia.org/wiki/Body_mass_index">BMI</a></li>
         <li>Know more about some <a href="https://www.wikihow.com/Live-a-Healthy-Lifestyle">healthy life style</a></li>
     </ul>
-
 
 
 </body>

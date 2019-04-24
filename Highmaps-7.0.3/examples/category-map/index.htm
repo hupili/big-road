@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Highmaps Example</title>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+<script src="../../code/highmaps.js"></script>
+<script src="../../code/modules/exporting.js"></script>
+<script src="../../code/modules/offline-exporting.js"></script>
+<script src="../../code/modules/data.js"></script>
+<script src="../../code/mapdata/custom/europe.js"></script>
+
+<div id="container" style="height: 500px; min-width: 310px; max-width: 480px; margin: 0 auto"></div>
+
+
+
+		<script type="text/javascript">
+
+// Instantiate the map
+Highcharts.mapChart('container', {
+    chart: {
+        map: 'custom/europe',
+        spacingBottom: 20
+    },
+
+    title: {
+        text: 'Europe time zones'
+    },
+
+    legend: {
+        enabled: true
+    },
+
+    plotOptions: {
+        map: {
+            allAreas: false,
+            joinBy: ['iso-a2', 'code'],
+            dataLabels: {
+                enabled: true,
+                color: '#FFFFFF',
+                style: {
+                    fontWeight: 'bold'
+                },
+                // Only show dataLabels for areas with high label rank
+                format: null,
+                formatter: function () {
+                    if (this.point.properties && this.point.properties.labelrank.toString() < 5) {
+                        return this.point.properties['iso-a2'];
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '',
+                pointFormat: '{point.name}: <b>{series.name}</b>'
+            }
+        }
+    },
+
+    series: [{
+        name: 'UTC',
+        data: ['IE', 'IS', 'GB', 'PT'].map(function (code) {
+            return { code: code };
+        })
+    }, {
+        name: 'UTC + 1',
+        data: ['NO', 'SE', 'DK', 'DE', 'NL', 'BE', 'LU', 'ES', 'FR', 'PL', 'CZ', 'AT', 'CH', 'LI', 'SK', 'HU',
+            'SI', 'IT', 'SM', 'HR', 'BA', 'YF', 'ME', 'AL', 'MK'].map(function (code) {
+                return { code: code };
+            })
+    }, {
+        name: 'UTC + 2',
+        data: ['FI', 'EE', 'LV', 'LT', 'BY', 'UA', 'MD', 'RO', 'BG', 'GR', 'TR', 'CY'].map(function (code) {
+            return { code: code };
+        })
+    }, {
+        name: 'UTC + 3',
+        data: [{
+            code: 'RU'
+        }]
+    }]
+});
+
+		</script>
+	</body>
+</html>

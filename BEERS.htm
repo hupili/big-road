@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example</title>
+
+    <style type="text/css">
+        #container {
+            min-width: 320px;
+            max-width: 800px;
+            margin: 0 auto;
+            height: 500px
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>BEERS</h1>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/gantt/modules/networkgraph.js"></script>
+
+    <div id="container"></div>
+
+
+
+    <script type="text/javascript">
+        // Initiate the chart
+        Highcharts.chart('container', {
+            chart: {
+                type: 'networkgraph'
+            },
+            plotOptions: {
+                networkgraph: {
+                    layoutAlgorithm: {
+                        enableSimulation: true
+                    }
+                }
+            },
+
+            series: [{
+                dataLabels: {
+                    enabled: true,
+                    linkTextPath: {
+                        attributes: {
+                            dy: 12
+                        }
+                    },
+                    linkFormat: '{point.fromNode.name} → {point.toNode.name}',
+                    textPath: {
+                        enabled: true,
+                        attributes: {
+                            dy: 14,
+                            startOffset: '45%',
+                            textLength: 80
+                        }
+                    },
+                    format: 'Node: {point.name}'
+                },
+                marker: {
+                    radius: 35
+                },
+                data: [{
+                    from: 'BEERS',
+                    to: 'Lagers'
+                }, {
+                    from: 'BEERS',
+                    to: 'Ales'
+                }, {
+                    from: 'Lagers',
+                    to: 'American Dark/Amber Lager'
+                }, {
+                    from: 'Lagers',
+                    to: 'Pilsner'
+                }, {
+                    from: 'Ales',
+                    to: 'Lambic'
+                }]
+            }]
+        })
+    </script>
+</body>
+
+</html>

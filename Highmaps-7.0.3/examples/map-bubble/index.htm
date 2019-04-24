@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Highmaps Example</title>
+
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="http://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+    <script src="http://code.highcharts.com/mapdata/custom/world.js"></script>
+
+    <div id="container" style="height: 500px; min-width: 310px; max-width: 800px; margin: 0 auto"></div>
+
+
+
+    <script type="text/javascript">
+        $.getJSON('https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/world-population.json', function(data) {
+
+            Highcharts.mapChart('container', {
+                chart: {
+                    borderWidth: 1,
+                    map: 'custom/world'
+                },
+
+                title: {
+                    text: 'World population 2013 by country'
+                },
+
+                subtitle: {
+                    text: 'Demo of Highcharts map with bubbles'
+                },
+
+                legend: {
+                    enabled: false
+                },
+
+                mapNavigation: {
+                    enabled: true,
+                    buttonOptions: {
+                        verticalAlign: 'bottom'
+                    }
+                },
+
+                series: [{
+                    name: 'Countries',
+                    color: '#E0E0E0',
+                    enableMouseTracking: false
+                }, {
+                    type: 'mapbubble',
+                    name: 'Population 2016',
+                    joinBy: ['iso-a3', 'code3'],
+                    data: data,
+                    minSize: 4,
+                    maxSize: '12%',
+                    tooltip: {
+                        pointFormat: '{point.properties.hc-a2}: {point.z} thousands'
+                    }
+                }]
+            });
+        });
+    </script>
+</body>
+
+</html>

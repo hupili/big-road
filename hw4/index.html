@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Analysis of the Data Visulisation</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 17px;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding: 20px;
+            background-image: url('images/data9.png')
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto
+        }
+        
+        .blue {
+            color: cornflowerblue
+        }
+        
+        .yellow {
+            color: rgb(241, 209, 26)
+        }
+        
+        .head {
+            background-color: antiquewhite;
+            font-size: 36px;
+            color: black;
+            text-align: center;
+            padding: 10px
+        }
+        
+        .introduction {
+            font-size: 17px
+        }
+        
+        .case {
+            font-size: 17px
+        }
+        
+        .analysis {
+            font-size: 17px
+        }
+        
+        .reference {
+            font-size: 17px
+        }
+        
+        .improvement {
+            font-size: 17px
+        }
+        
+        .principle {
+            font-size: 17px;
+            margin-left: 50px
+        }
+        
+        .content {
+            font-size: 17px
+        }
+        
+        .title1 {
+            text-align: center;
+            background-color: rgba(243, 231, 217, 0.336);
+            font-size: 30px;
+            font-weight: 1000;
+            text-align: center;
+            color: rgba(107, 33, 33, 0.849)
+        }
+        
+        .keyword {
+            font-weight: bold
+        }
+        
+        .website {
+            text-align: center
+        }
+        
+        .keykeyword {
+            font-size: 25px;
+            font-weight: bold
+        }
+        
+        #space {
+            position: absolute;
+            margin: 8em;
+            height: 3px
+        }
+        
+        @media screen and (max-width:600px) {
+            .content1 {
+                width: 100%;
+                text-align: center;
+                font-size: 10px
+            }
+            .head {
+                font-size: 15px
+            }
+            .head {
+                background-color: antiquewhite;
+                font-size: 25px;
+                color: black;
+                text-align: center;
+                padding: 10px
+            }
+            .title1 {
+                text-align: center;
+                background-color: rgba(243, 231, 217, 0.336);
+                font-size: 14px;
+                font-weight: 1000;
+                text-align: center;
+                color: rgba(107, 33, 33, 0.849)
+            }
+            .introduction {
+                font-size: 10px
+            }
+            .case {
+                font-size: 10px
+            }
+            .analysis {
+                font-size: 10px
+            }
+            .reference {
+                font-size: 10px
+            }
+            .improvement {
+                font-size: 10px
+            }
+            .principle {
+                font-size: 10px;
+                margin-left: 50px
+            }
+            .content {
+                font-size: 10px
+            }
+            @media(min-width:800px) {
+                #begin {
+                    display: grid;
+                    grid-template-columns: 2fr 1fr;
+                    grid-template-rows: auto;
+                    grid-template-areas: "hs p1 p2"
+                }
+            }
+            @media(min-width: 600px) {
+                #bigin {
+                    display: grid;
+                    grid-template-columns: 2fr 1fr;
+                    grid-template-rows: auto;
+                    grid-template-areas: "hs p2"
+                }
+            }
+        }
+    </style>
+</head>
+
+<body style="margin:0px; background-color:white">
+    <div class="head">How Data lies ?</div>
+
+    <div class="content1">
+        <div class="title1">
+            <p>Introduction</p>
+        </div>
+        <p>These days, more and more people use data visulasation in <span class="keyword">
+            commercial adevertisements and journals. </span>Some data visulasation help people to understand contents easier. However, some usage of data visulasation mislead people.</p>
+        <p>The role of data visualization in communicating the complex insights hidden inside data is vital. This is becoming more and more important since the audience for data visualizations is also expanding along with the size of data. Data visualizations
+            are now consumed by people from all sorts of professional backgrounds. For the same reason, the ease of consumption is now a hot topic. While data scientists and analysts have an eye for digging out the key insights from even complex visualizations,
+            a top business stakeholder or an average person might not be able to do the same.</p>
+        <p>And this is what makes effective data visualization the need of the hour. Communicating the data effectively is an art. However, many data scientists lag behind when it comes to the design.</p>
+        <div class="title1">
+            <p>Some Ways Avoid Misleading</p>
+        </div>
+        <li><span class="keyword">Hiding </span>relevant data</li>
+        <li>Presenting <span class="keyword">too much data</span></li>
+        <li><span class="keyword">Distorting </span>the presentation of data</li>
+        <li>Describing the data <span class="keyword">inaccurately in annotations, title, or within the visualization itself</span></li>
+
+    </div>
+
+
+
+    <div class="content1">
+        <div class="case">
+            <div class="title1">
+                <p>Case 1</p>
+            </div>
+            <img src="../images/data1.png ">
+            <br>
+
+            <a href="https://www.carolinahuddle.com/boards/topic/135996-scotlands-first-minister-nicola-sturgeon-makes-formal-request-to-hold-a-second-scottish-independence-referendum/ ">check original information</a>
+            <p> <u>What it want to show:</u> They want to use these two data visulasation to show the supporting situation.
+            </p>
+            <p><u>How it shows: </u>They use two different colors to show that different regions suppoert different political parties.
+            </p>
+            <p><u>What information it gives to the audience:</u> However, just use regions to show supporting is not accurate. For example, in region A, there is 51% citizens who support <span class="blue">Party A</span>, others (49%) support <span class="yellow">Party B</span>                So, the color of this region will be showed as <span class="blue">Bule</span> Meanwhile, if in region B, there are 99% people who support <span class="blue">Party A</span>, others support<span class="yellow">Party B</span>, region B also
+                shows <span class="blue">Blue</span>in region B. However, obviously, in region A and region B ,the pesentage of supporting for two parties are different. Thus, it is not accurate to show supporting situation by using these two graphs,
+                considering the specific politcy.</p>
+
+        </div>
+
+    </div>
+
+    </div>
+
+
+    <div class="content1">
+        <div class="analysis">
+            <div class="title1">
+                <p>Analysis 1</p>
+            </div>
+
+            <img src="../images/data2.jpg ">
+            <br>
+            <div class="website">
+                <a href="http://www.thefunctionalart.com/2016/06/diverging-color-schemes-showing-good_26.html ">click to check more analysis</a>
+
+                <br>
+                <div class="keykeyword">
+                    <p>Which graph is better ?</p>
+                    <p>Actually!!!</p>
+                </div>
+            </div>
+            <p>These two graphs are misleading and far from being “real”, although it does show accurate data. This is yet another example of how to build a dubious visualization using legitimate numbers. Good data isn't the only component of visualization;
+                the way you depict it matters a lot</p>
+        </div>
+
+    </div>
+    <div class="content1">
+        <div class="improvement">
+            <div class="title1">
+                <p>How to <span class="keyword">Improve</span></p>
+            </div>
+            <img src="../images/data3.png ">
+            <br>
+            <div class="website">
+                <a href="https://www.nytimes.com/interactive/2016/06/24/world/europe/how-britain-voted-brexit-referendum.html ">click to check more detailed analysis in New York Times</a>
+            </div>
+            <p> A much more truthful depiction of the results appeared in The New York Times (below). It improves on the imperfect binary Brexit map by adding shades of color, which is a great idea.</p>
+            <p>Actually, by taking a look at the maps by the Times, we’d argue that two maps above  obscure the fact that the some highly populated areas of Scotland were strongly in favor of remaining in the EU.</p>
+
+        </div>
+
+        <div class="content1">
+            <div class="case">
+                <div class="title1">
+                    <p>Case 2</p>
+                </div>
+                <img src="../images/data5.jpeg ">
+                <br>
+
+                <a href="https://www.weeklystandard.com/daniel-halper/over-100-million-now-receiving-federal-welfare">check original information</a>
+                <p> <u>Background Information:</u> A new chart set to be released later today by the Republican side of the Senate Budget Committee details a startling statistic: "Over 100 Million People in U.S. Now Receiving Some Form Of Federal Welfare."
+                </p>
+                <p><u>How it shows: </u>They use two different colors to show that different regions suppoert different political parties.
+                </p>
+                <p><u>What information it gives to the audience:</u> The data come "from the U.S. Census’s Survey of Income and Program Participation shows that nearly 110,000 million individuals received a welfare benefit in 2011. (These figures do not
+                    include other means-tested benefits such as the Earned Income Tax Credit or the health insurance premium subsidies included in the President’s health care law. CBO estimates that the premium subsidies, scheduled to begin in 2014, will
+                    cover at least 25 million individuals by the end of the decade.)"</p>
+
+            </div>
+
+        </div>
+        <div class="content1">
+            <div class="analysis">
+                <div class="title1">
+                    <p>Analysis 2</p>
+                </div>
+
+                <img src="../images/data2.jpg ">
+                <br>
+                <div class="website">
+                    <a href="https://www.stepupmagazine.com/single-post/2018/06/27/What-You-Need-to-Know-About-Misleading-Charts-in-the-Media">click to check more analysis</a>
+
+                    <br>
+                    <div class="keykeyword">
+                        <p>Do You Find What is Wrong With it ? ?</p>
+
+                    </div>
+                </div>
+                <p><u>Analysis: </u><br>For instance, look at a graph published by The Weekly Standard in an article on welfare. Looking at the visual components on the graph, we can see that the size of the bars imply that around 300% more US citizens used
+                    welfare in 2011 than 2009, a staggering statistic. A closer look at the graph, however, reveals that the y-axis begins at 94 million, a true crime considering that the y-axis of any bar graph should always start from 0. Failure to
+                    start the y-axis at zero results in inflated bar sizes. When solely considering the numbers, the difference in welfare recipients from 2009 to 2011 was only about 10%. The startling difference between the facts portrayed by the graph
+                    and the facts given by the actual data is a troubling. Sadly, this is an effective tactic, as the graph could easily lead any reader to believe that the US had a severe welfare dependency crisis. Few news sites are immune to inaccurate
+                    visuals. Whenever someone wants to catch up on current events, misleading graphs are used on practically every news site… and it doesn’t stop at news. We’ve all bought an instant-blow-dryer-comb under the impression that it was “top
+                    quality” and “x times more effective than the competition” at least once. Fallacious charts aren’t the root of our poor shopping decisions, but they have proven to be capable of placing false impressions on consumers, causing them
+                    to purchase subpar items due to their flashy, yet inaccurate, graphs. Though it is unlikely that journalists and advertisers will ever cease their publishing inaccurate visuals, it is possible for readers to avoid being lured into
+                    them. There are several common tactics used to make graphs misleading, including uneven y-axis increments, lack of axis labels, incorrect sizing of visuals in pictographs, information that is plotted wrong (yes, it has happened in
+                    major publications), and misinterpretation of the statistics. If people start looking out for these red flags, then we will not be so deceived by graphs anymore. Deceptive graphs are very common in the media, which only emphasizes
+                    the importance of knowing which graphs are legitimate. If you learn what makes a chart misleading, you will be able to outsmart all of these graphs, and you can even guide modern audiences in the era of “alternative facts.”</p>
+                <p>
+                    <u>More misleading graphs</u>
+                </p><img src="../images/data6.png">
+                <img src="../images/data7.png">
+                <img src="../images/data8.jepg"></div>
+
+
+        </div>
+
+
+
+        <div class="content1">
+
+            <div class="title1">
+                <p><span class="keyword">Eight</span> Design Principles</p>
+
+                <div class="principle">
+                    <li> Balance the design</li>
+                    <li>Emphasize the key areas</li>
+                    <li> Illustrating movement</li>
+                    <li>Smart use of patterns</li>
+                    <li> Proportion</li>
+                    <li> Proper rhythm</li>
+                    <li> Variety</li>
+                    <li>Theme</li>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="content">
+            <div class="reference">
+                <div class="title1">
+                    <p>Reference</p>
+
+                </div>
+                <p>--http://www.thefunctionalart.com/2016/06/diverging-color-schemes-showing-good_26.html</p>
+                <span><a href="http://www.thefunctionalart.com/2016/06/diverging-color-schemes-showing-good_26.html">Analysis</a></span>
+                <p>https://www.stepupmagazine.com/single-post/2018/06/27/What-You-Need-to-Know-About-Misleading-Charts-in-the-Media</p>
+                <br>
+                <p>--https://www.carolinahuddle.com/boards/topic/135996-scotlands-first-minister-nicola-sturgeon-makes-formal-request-to-hold-a-second-scottish-independence-referendum/</p>
+                <a href="https://www.carolinahuddle.com/boards/topic/135996-scotlands-first-minister-nicola-sturgeon-makes-formal-request-to-hold-a-second-scottish-independence-referendum/">chart2</a>
+                <p>More information about misleading data visualization</p>
+                <br>
+                <a href="https://conversionxl.com/blog/avoid-being-deceived-by-data/">How to Avoid Being Deceived By Data</a>
+                <br>
+                <a href="http://www.tylervigen.com/spurious-correlations">Spurious Correlation</a>
+                <br>
+                <a href="https://www.quora.com/What-are-examples-of-bad-data-visualization-thats-misleading-and-confusing">What are examples of bad data visualization </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
