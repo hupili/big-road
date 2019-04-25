@@ -450,7 +450,7 @@
                             <!-- Portfolio -->
                             <section id="issue12">
                                 <header class="major">
-                                    <h2>參與社區的迫切 缺乏社交的機會</h2>
+                                    <h2>關注點一：參與社區的迫切</h2>
                                 </header>
                                 <div class="row">
 
@@ -581,7 +581,7 @@
                                         <div>
                                             <br>
                                             <p><q>"若兒子不能融入社區，可能他的能力會退步，會成為「隱蔽青年」。希望他們可以多些主流朋友，擴闊生活圈子，
-													又可以從別人身上互相學習。" </q></p>
+													又可以從別人身上互相學習。"<br>----自閉症家長 </q></p>
                                         </div>
                                         <script>
                                             Highcharts.chart('container2', {
@@ -873,12 +873,13 @@
 
                             <section id="issue12">
                                 <header class="major">
-                                    <h2>參與社區的迫切 缺乏社交的機會</h2>
+                                    <h2>關注點二：參與社區現況不理想</h2>
                                 </header>
+
                                 <div class="row">
                                     <!-- <div class="col-12"> -->
                                     <!-- <div class="col-3 col-6-medium col-12-small"> -->
-                                    <div class="col-6-medium col-12-small">
+                                    <div class="col-6 col-6-medium col-12-small">
                                         <!-- <div class="col-xs-12 col-sm-6 col-md-8"> -->
                                         <div id="containera" align='center'></div>
                                         <div>
@@ -939,7 +940,7 @@
 
                                     <!-- chartb -->
                                     <!-- <div class="col-xs-6 col-md-4"> -->
-                                    <div class="col-3 col-6-medium col-12-small">
+                                    <div class="col-6 col-6-medium col-12-small">
 
                                         <div id="containerb" align='center'></div>
                                         <div>
@@ -1014,146 +1015,150 @@
                         <!-- comments -->
                         <section id="issue34">
                             <header class="major">
-                                <h2>參與社區現況不理想 遭受排斥和歧視 </h2>
+                                <h2>關注點三：遭受排斥和歧視 </h2>
                             </header>
                             <header class="major1">
-                                <h2>遭受排斥和歧視，家長外出時感卻步 </h2>
+                                <h2>遭受排斥和歧視的經歷，家長外出時感卻步 </h2>
                             </header>
 
+                            <div class="row">
+                                <!-- chartc -->
+                                <div class="col-6 col-6-medium col-12-small">
+                                    <div id="containerc" align='center'></div>
+                                    <div>
+                                        <br>
+                                        <p>- 多達6成(62.3%)家長表示與子女外出時，曾被別人報以不友善的目光和語言<br> - 多達4成半(44.2%和45.5%)家長表示子女參與社區活動時，曾經被取笑和欺凌和被親友批評子女「頑皮」或是「管教不當」<br> - 只有1成(11%)家長認為社區人士很接納自閉症人士的特點和不同。只有一半(49.5%)家長感受到子女是社會的一份子
 
-                            <!-- chartc -->
-                            <div class="col-3 col-6-medium col-12-small">
-                                <div id="containerc" align='center'></div>
-                                <div>
-                                    <br>
-                                    <p>- 多達6成(62.3%)家長表示與子女外出時，曾被別人報以不友善的目光和語言<br> - 多達4成半(44.2%和45.5%)家長表示子女參與社區活動時，曾經被取笑和欺凌和被親友批評子女「頑皮」或是「管教不當」<br> - 只有1成(11%)家長認為社區人士很接納自閉症人士的特點和不同。只有一半(49.5%)家長感受到子女是社會的一份子
+                                        </p>
+                                    </div>
 
-                                    </p>
+
+                                    <script>
+                                        Highcharts.chart('containerc', {
+
+                                            chart: {
+                                                type: 'column',
+                                                height: 400,
+                                                width: 290
+                                            },
+
+                                            title: {
+                                                text: '遭受排斥和歧視'
+                                            },
+
+                                            xAxis: {
+                                                categories: ['表示與子女外出時，曾被別人報以不友善的目光和語言',
+                                                    '表示子女參與社區活動時，曾經被取笑和欺凌和被親友批評子女「頑皮」或是「管教不當」',
+                                                    '認為社區人士很接納自閉症人士的特點和不同',
+                                                    '感受到子女是社會的一份'
+                                                ]
+                                            },
+
+                                            yAxis: {
+                                                allowDecimals: false,
+                                                min: 0,
+                                                title: {
+                                                    text: '樣本總量（100%）'
+                                                }
+                                            },
+
+                                            tooltip: {
+                                                formatter: function() {
+                                                    return '<b>' + this.x + '</b><br/>' +
+                                                        this.series.name + ': ' + this.y + '<br/>';
+                                                }
+                                            },
+
+                                            plotOptions: {
+                                                column: {
+                                                    stacking: 'normal'
+                                                }
+                                            },
+
+
+                                            series: [{
+                                                name: '佔百分比',
+                                                data: [62.3, 44.2, 11, 49.5],
+
+                                            }]
+                                        });
+                                    </script>
                                 </div>
 
 
-                                <script>
-                                    Highcharts.chart('containerc', {
 
-                                        chart: {
-                                            type: 'column',
-                                            height: 400,
-                                            width: 290
-                                        },
-
-                                        title: {
-                                            text: '遭受排斥和歧視'
-                                        },
-
-                                        xAxis: {
-                                            categories: ['表示與子女外出時，曾被別人報以不友善的目光和語言',
-                                                '表示子女參與社區活動時，曾經被取笑和欺凌和被親友批評子女「頑皮」或是「管教不當」',
-                                                '認為社區人士很接納自閉症人士的特點和不同',
-                                                '感受到子女是社會的一份'
-                                            ]
-                                        },
-
-                                        yAxis: {
-                                            allowDecimals: false,
-                                            min: 0,
-                                            title: {
-                                                text: '樣本總量（100%）'
-                                            }
-                                        },
-
-                                        tooltip: {
-                                            formatter: function() {
-                                                return '<b>' + this.x + '</b><br/>' +
-                                                    this.series.name + ': ' + this.y + '<br/>';
-                                            }
-                                        },
-
-                                        plotOptions: {
-                                            column: {
-                                                stacking: 'normal'
-                                            }
-                                        },
-
-
-                                        series: [{
-                                            name: '佔百分比',
-                                            data: [62.3, 44.2, 11, 49.5],
-
-                                        }]
-                                    });
-                                </script>
-                            </div>
-
-                    </div>
-
-                    <header class="major1">
+                                <!-- <header class="major1">
                         <h2>參與社區時遭受排斥和歧視，家長外出時感卻步 </h2>
-                    </header>
+                    </header> -->
 
-                    <!-- chartd -->
-                    <div class="col-3 col-6-medium col-12-small">
-                        <div id="containerd" align='center'></div>
-                        <div>
-                            <br>
-                            <p>-多達7成(70.1%)家長擔心子女受到不必要的排斥和歧視<br> -多達6成(62.3%)家長與子女乘坐交通工具時，害怕他/她帶給別人麻煩和滋擾
-                                <br> -多達6成(59.6%)家長擔心子女的行為和表現會令人不快
-                                <br> -多達3成(31%)家長由於害怕別人的看法，我很少帶子女到戲院和其他人多的地方
+                                <!-- chartd -->
+                                <div class="col-6 col-6-medium col-12-small">
+                                    <div id="containerd" align='center'></div>
+                                    <div>
+                                        <br>
+                                        <p>-多達7成(70.1%)家長擔心子女受到不必要的排斥和歧視<br> -多達6成(62.3%)家長與子女乘坐交通工具時，害怕他/她帶給別人麻煩和滋擾
+                                            <br> -多達6成(59.6%)家長擔心子女的行為和表現會令人不快
+                                            <br> -多達3成(31%)家長由於害怕別人的看法，我很少帶子女到戲院和其他人多的地方
 
-                            </p>
-                        </div>
+                                        </p>
+                                    </div>
 
-                        <script>
-                            Highcharts.chart('containerd', {
+                                    <script>
+                                        Highcharts.chart('containerd', {
 
-                                chart: {
-                                    type: 'column',
-                                    height: 400,
-                                    width: 290
-                                },
+                                            chart: {
+                                                type: 'column',
+                                                height: 400,
+                                                width: 290
+                                            },
 
-                                title: {
-                                    text: '參與社區時遭受排斥和歧視'
-                                },
+                                            title: {
+                                                text: '家長的擔心'
+                                            },
 
-                                xAxis: {
-                                    categories: ['擔心子女受到不必要的排斥和歧視',
-                                        '與子女乘坐交通工具時，害怕他/她帶給別人麻煩和滋擾',
-                                        '擔心子女的行為和表現會令人不快',
-                                        '由於害怕別人的看法，我很少帶子女到戲院和其他人多的地方'
-                                    ]
-                                },
+                                            xAxis: {
+                                                categories: ['擔心子女受到不必要的排斥和歧視',
+                                                    '與子女乘坐交通工具時，害怕他/她帶給別人麻煩和滋擾',
+                                                    '擔心子女的行為和表現會令人不快',
+                                                    '由於害怕別人的看法，我很少帶子女到戲院和其他人多的地方'
+                                                ]
+                                            },
 
-                                yAxis: {
-                                    allowDecimals: false,
-                                    min: 0,
-                                    title: {
-                                        text: '樣本總量（100%）'
-                                    }
-                                },
+                                            yAxis: {
+                                                allowDecimals: false,
+                                                min: 0,
+                                                title: {
+                                                    text: '樣本總量（100%）'
+                                                }
+                                            },
 
-                                tooltip: {
-                                    formatter: function() {
-                                        return '<b>' + this.x + '</b><br/>' +
-                                            this.series.name + ': ' + this.y + '<br/>';
-                                    }
-                                },
+                                            tooltip: {
+                                                formatter: function() {
+                                                    return '<b>' + this.x + '</b><br/>' +
+                                                        this.series.name + ': ' + this.y + '<br/>';
+                                                }
+                                            },
 
-                                plotOptions: {
-                                    column: {
-                                        stacking: 'normal'
-                                    }
-                                },
+                                            plotOptions: {
+                                                column: {
+                                                    stacking: 'normal'
+                                                }
+                                            },
 
 
-                                series: [{
-                                    name: '佔百分比',
-                                    data: [70.1, 62.3, 59.6, 31],
+                                            series: [{
+                                                name: '佔百分比',
+                                                data: [70.1, 62.3, 59.6, 31],
 
-                                }]
-                            });
-                        </script>
+                                            }]
+                                        });
+                                    </script>
 
+                                </div>
+                            </div>
                     </div>
+
+
                     <div class="row">
 
                         <div class="col-3 col-3-small pics">
@@ -1165,7 +1170,7 @@
 
                         <div class="col-8 col-8-small text1">
                             <br>
-                            <p> 我覺得被孤立及不被認同是社會一份子。
+                            <p> “我覺得被孤立及不被認同是社會一份子。”
                                 <br>
                                 <br> -- 自閉症中學生
                             </p>
@@ -1181,12 +1186,12 @@
                         <div class="col-8 col-8-small text2">
 
                             <p>
-                                即使他們嘗試與子女參與社區，但合適的活動也不多， 多數都只是參與親友或相熟朋友的聚會，或相約「同路人」外出活動，如：參與學校安排的課外活動。
+                                “即使他們嘗試與子女參與社區，但合適的活動也不多， 多數都只是參與親友或相熟朋友的聚會，或相約「同路人」外出活動，如：參與學校安排的課外活動。”
 
-                                <br> 壓力來源大都是來自外出時旁人的目光，如：其他人會望著、 取笑、講出「無家教」、「唔識教就唔好生」等， 即使旁人有時不說話，但單看表情已經感覺主流人士 覺得自己子女有問題。
-                                <br> -- 自閉症人士家長 </p>
+                                <br> “壓力來源大都是來自外出時旁人的目光，如：其他人會望著、 取笑、講出「無家教」、「唔識教就唔好生」等， 即使旁人有時不說話，但單看表情已經感覺主流人士 覺得自己子女有問題。”
+                            </p>
                             <p>
-                                “外出時會有壓力，好多時都有! 囝囝因為對聲音敏感，很多時都有很大反應; 亦不懂得社交距離，害怕他會嚇怕人。” <br> -- 自閉症人士家長 </p>
+                                “外出時會有壓力，好多時都有! 囝囝因為對聲音敏感，很多時都有很大反應; 亦不懂得社交距離，害怕他會嚇怕人。” </p>
                             <p>
                                 “他們在就業方面很困難，即使被聘請，亦會面對排斥，令他工作不愉快，我寧願他留在工場開開心心。”<br> -- 自閉症人士家長 </p>
 
@@ -1216,8 +1221,8 @@
                         <div class="col-8 col-8-small text1">
                             <br>
                             <p>
-                                學生很少與朋友外出娛樂，能力弱的學生主要是留在家中一個人玩。社區上合適自閉症學生的活動選擇很少，因為機構缺乏資源。
-                                <br> 有「巴士迷」的自閉症人士，因為溝通及語氣有問題，引起其他「巴士迷」不滿，在Facebook上被網路欺凌，甚至被打。
+                                “學生很少與朋友外出娛樂，能力弱的學生主要是留在家中一個人玩。社區上合適自閉症學生的活動選擇很少，因為機構缺乏資源。”
+                                <br> “有「巴士迷」的自閉症人士，因為溝通及語氣有問題，引起其他「巴士迷」不滿，在Facebook上被網路欺凌，甚至被打。”
                                 <br> -- 特殊學校老師
                             </p>
                         </div>
@@ -1229,8 +1234,8 @@
                         <div class="col-8 col-8-small text2">
                             <br>
                             <p>
-                                有學生在一般琴行學琴，跟不上進度，導師很快就話同學不適合，不願意教他。現時社區中心的活動都不合適他們參與， 若要參與，都要一對一的活動， 可以融入社區的自閉症人士只有很少數。
-                                <br> 一些自閉症學童有時會有自言自語的行為， 旁人不明白會覺得好奇怪，家長為避免歧視目光會避免坐港鐵。
+                                “有學生在一般琴行學琴，跟不上進度，導師很快就話同學不適合，不願意教他。現時社區中心的活動都不合適他們參與， 若要參與，都要一對一的活動， 可以融入社區的自閉症人士只有很少數。”
+                                <br> “一些自閉症學童有時會有自言自語的行為， 旁人不明白會覺得好奇怪，家長為避免歧視目光會避免坐港鐵。”
                                 <br> -- 特殊學校社工
                             </p>
                             <p>
@@ -1246,7 +1251,7 @@
 
 
                     </div>
-                    <header class="major1">
+                    <!-- <header class="major1">
                         <h2>對自閉症人士缺乏認識，並存有普遍的誤解和偏見</h2>
                     </header>
                     <p>- 近7成(68.7%)家長認為社會人士對自閉症人士缺乏認識及了解<br> - 多達7成半(74.3%)家長認為社會人士不懂得與自閉症人士合作及溝通<br> - 多達4成社區人士覺得自己不懂得與自閉症人士相處，缺乏對他們的認識和了解(41.8%)和認為他們的情緒及行為難以理解(42.9%)<br> - 多達8成(78.9%)家長覺得公眾對自閉症人士並不認識，而且有很多誤解<br> - 接近一半(45.5%)家長曾被親友批評我的子女「頑皮」或是我「管教不當」<br>                        - 多達3成半(35%)家長覺得公眾人士害怕接觸我的子女<br> - 3.2 對自閉症人士缺乏認識，並存有普遍的誤解和偏見<br> - 近7成(68.7%)家長認為社會人士對自閉症人士缺乏認識及了解<br> - 多達7成半(74.3%)家長認為社會人士不懂得與自閉症人士合作及溝通<br> - 多達4成社區人士覺得自己不懂得與自閉症人士相處，缺乏對他們的認識和了解(41.8%)和認為他們的情緒及行為難以理解(42.9%)
@@ -1342,7 +1347,8 @@
                         </div>
 
 
-                    </div>
+                    </div> -->
+
                     <header class="major1">
                         <h2>對自閉症人士缺乏認識，並存有普遍的誤解和偏見</h2>
                     </header>
@@ -1366,7 +1372,7 @@
                                 <div class="col-8 col-8-small text2">
 
                                     <p>
-                                        “市民都不認識及理解自閉症人士，對他們有誤解，認為他們有攻擊性，會傷害人。” <br> -- 自閉症人士家長 </p>
+                                        “市民都不認識及理解自閉症人士，對他們有誤解，認為他們有攻擊性，會傷害人。” </p>
                                     <p>
                                         “與兒子到茶餐廳食飯，他發出了怪聲，其他人感到很愕然。但自己的朋友沒覺得奇怪。公眾因為不認識自閉症人士，才會作出奇怪的反應。” <br> -- 自閉症人士家長 </p>
 
@@ -1423,7 +1429,7 @@
                                 <!-- comments -->
                                 <section id="issue34">
                                     <header class="major">
-                                        <h2>缺乏接觸和認識的機會 </h2>
+                                        <h2>關注點四：缺乏接觸和認識的機會 </h2>
                                     </header>
                                     <img src="images/autisma.png" alt="Smiley face" width="500
                                                     " height="400" /><br>
