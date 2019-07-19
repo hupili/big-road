@@ -30,3 +30,7 @@ In Chinese, people say **大道至简**. HTML was born a declarative and easy-to
 - [Analysis of People's daily](https://lullabymia.github.io/big-road/)
 - [Insights from AppStore](https://catmint1215.github.io/)
 - [Communication Job Market](https://zhangningnina.github.io/big-road/)
+- [中国吃瓜图鉴](https://cgcaine.github.io/)
+- [口红经济](https://aguaic.github.io/)
+- [如何成为一名超模](https://yummy327.github.io/)
+
